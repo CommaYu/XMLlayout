@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--减少重复代码使用-->
+    <!--自定义的一些样式-->
+    <style name="tvStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--样式的继承写法：有两种，各有各的优势，如果只修改一个就用1，修改很多的话就用第二个，完全重新命名，看需求-->
+    <!--用第一种方式，感觉TextView之间联系多一点，视情况来-->
+    <style name="tvStyle.backgroud">
+        <item name="android:background">#4348e1</item>
+    </style>
+
+    <style name="tvStyle2" parent="tvStyle">
+        <item name="android:background">#37cc2d</item>
+    </style>
+
+    <!--专门为test_iv2tv.xml里面的TextView做的，看Google帮助文档用继承的方式写，又大大减少了代码量-->
+    <style name="tvStyle.test_iv2tv">
+        <item name="android:background">@drawable/selector_item_bg</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="btnStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

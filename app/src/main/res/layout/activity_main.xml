@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.xmllayout.MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        style="@style/tvStyle"
+        android:text="Android XML优化系列" />
+
+    <Button
+        android:id="@+id/btn_LinearLayoutCompat"
+        style="@style/btnStyle"
+        android:text="test_LinearLayoutCompat" />
+
+    <Button
+        android:id="@+id/btn_iv2tv"
+        style="@style/btnStyle"
+        android:text="test_iv2tv" />
+
+    <Button
+        android:id="@+id/btn_ViewStub"
+        style="@style/btnStyle"
+        android:text="test_ViewStub" />
+
+    <!--对于一个有两个状态的Button，我们可以直接用CheckBox替换Button用标志位判断true和false，因为CheckBox直接替换好了-->
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/selector_item_bg"
+        android:text="CheckBox" />
+
+    <EditText
+        android:id="@+id/et_name3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="公司" />
+
+    <!--把要隐藏的放入ViewStub，提升XML性能-->
+    <ViewStub
+        android:id="@+id/vs_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/test_4viewstub"></ViewStub>
+
+    <EditText
+        android:id="@+id/et_name4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="地址" />
+
+</LinearLayout>

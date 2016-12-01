@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d2d0d0"
+    android:orientation="vertical">
+
+    <!--成功把ImageView和TextView合体成为TestView-->
+    <!--利用android:drawablePadding="20dp"修改图片和文字之间的距离-->
+
+    <!--TextView用selector点击背景要改变，必须要有android:clickable="true"-->
+    <!--这种没有3D按压效果的更加像微信里面的做法-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_item_bg"
+        android:clickable="true"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawablePadding="20dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="朋友圈" />
+
+    <!--用button做出来的又3D效果-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_item_bg"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawablePadding="20dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="朋友圈"
+        android:textAllCaps="false" />
+
+    <!--这个没办法添加文字-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_item_bg" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:divider="@drawable/shape_divider"
+        app:showDividers="middle">
+
+        <TextView
+            style="@style/tvStyle.test_iv2tv"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="扫一扫" />
+
+        <TextView
+            style="@style/tvStyle.test_iv2tv"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:drawablePadding="20dp"
+            android:padding="10dp"
+            android:text="摇一摇" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="容易增加布局层级和深度的布局+View的使用" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:background="#ff0000"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通过hierarchy view工具可以查看到，这个地方的布局比上面用LinearLayoutCompat多了一层，布局更加复杂更加深了" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
